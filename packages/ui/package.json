@@ -50,18 +50,11 @@
     "README.md"
   ],
   "scripts": {
-    "build:jail": "node scripts/build-jail-runtime.mjs",
-    "prebuild": "pnpm run build:jail",
     "build": "tsc -p tsconfig.json",
     "postbuild": "node scripts/build-eject-templates.mjs",
-    "pretest": "pnpm run build:jail",
     "test": "vitest run",
-    "pretest:coverage": "pnpm run build:jail",
-    "pretypecheck": "pnpm run build:jail",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "pretest:browser": "pnpm run build:jail",
     "test:browser": "playwright test",
-    "pretest:ui": "pnpm run build:jail",
     "test:ui": "playwright test e2e/smoke.spec.ts",
     "test:mcp-shim": "playwright test --config e2e/mcp-shim.config.ts",
     "build:mcp-shim": "node scripts/build-mcp-app-shim.mjs",

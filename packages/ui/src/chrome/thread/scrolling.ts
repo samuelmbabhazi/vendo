@@ -175,7 +175,7 @@ export function useStickToBottom(messages: UIMessage[], threadKey?: string, cont
     // the message-driven stick already ran. Re-run so the reader stays pinned.
   }, [messages, contentRevision]);
 
-  // A generated view mounts and grows AFTER the messages effect runs (the jail
+  // A generated view mounts and grows AFTER the messages effect runs (the frame
   // renders async; logos/images load late). Without watching actual size, the
   // stick fires before the growth and the newest content — the approval card,
   // the closing line — lands below the fold. Observe the content box and
